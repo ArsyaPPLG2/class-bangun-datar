@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class bangun_datar{
+            luas(){
+
+            }
+            keliling(){
+
+            }
+        }
+        class persegi extends bangun_datar{
+            sisi;
+            luas(){ // sisi*sisi
+               return this.sisi * this.sisi
+            }
+            keliling(){
+                return this.sisi+this.sisi+this.sisi+this.sisi
+            }
+        }
+        var persegi1 = new persegi();
+        persegi1.sisi = 4;
+
+        document.write("luas persegi nya : " + persegi1.luas());
+        document.write("<br />");
+        document.write("keliling persegi nya : " + persegi1.keliling());
+        document.write("<hr />");
+        document.write("<br />");
+        class persegi_panjang extends bangun_datar{
+            panjang;
+            lebar;
+            luas(){
+                return 0.5*this.panjang*this.lebar
+            }
+            keliling(){
+                return 2 * this.panjang + this.lebar
+            }
+        }
+        var persegi_panjang1 = new persegi_panjang();
+
+        persegi_panjang1.panjang = 4
+        persegi_panjang1.lebar = 5
+
+        document.write("luas persegi panjang nya : " + persegi_panjang1.luas());
+        document.write("<br />");
+        document.write("keliling persegi panjang nya : " + persegi_panjang1.keliling());
+        document.write("<hr />");
+        document.write("<br />");
+        class segitiga extends bangun_datar{
+           alas;
+           tinggi;
+           sisi;
+            luas(){
+                return 0.5 * this.alas*this.tinggi
+            }
+            keliling(){
+                return this.sisi + this.sisi + this.sisi
+            }
+        }
+        var segitiga1 = new segitiga();
+        segitiga1.alas = 2
+        segitiga1.tinggi = 5
+        segitiga1.sisi = 3
+
+        document.write("luas segitiga nya : " + segitiga1.luas());
+        document.write("<br />");
+        document.write("keliling segitiga nya : " + segitiga1.keliling());
+        document.write("<hr />");
+        document.write("<br />");
+    </script>
+</body>
+</html>
